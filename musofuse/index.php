@@ -14,6 +14,7 @@ include("php/dbconnect.php");
 <link rel="stylesheet" href="css/style.css">
 <link href="http://fonts.googleapis.com/css?family=Oswald:400,300,700" rel="stylesheet" type="text/css">
 <link href="http://fonts.googleapis.com/css?family=Open+Sans:400,400italic,600,600italic,700,700italic" rel="stylesheet" type="text/css">
+
 <!-- JS -->
 <script src="js/jquery-1.11.1.min.js"></script>
 
@@ -124,6 +125,8 @@ require("php/footer.php");
       });
     </script>
     <script src="js/global.js"></script>
-    <script src="js/jquery.royalslider.min.js"></script>                                                            
+    <script src="js/jquery.royalslider.min.js"></script>
+	<script src="https://cdn.socket.io/socket.io-1.2.0.js"></script>
+	<script src="js/client.js"></script>
 </body>
 </html>
