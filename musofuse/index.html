@@ -8,16 +8,14 @@
         <link rel="stylesheet" href="css/style.css">
         <link href="http://fonts.googleapis.com/css?family=Oswald:400,300,700" rel="stylesheet" type="text/css">
         <link href="http://fonts.googleapis.com/css?family=Open+Sans:400,400italic,600,600italic,700,700italic" rel="stylesheet" type="text/css">
-
         <!-- JS -->
         <script src="http://code.jquery.com/jquery-1.11.1.js"></script>
-
     </head>
-
     <body>
-        <!------------------------------------------------------------------------------------------------------------------------------------> 
-        <!-- HEADDER -->
-    
+        
+        
+<!------------------------------------------------------------------------------------------------------------------------------------> 
+<!-- HEADDER -->
         <header class="boxed_content">
             <!-- START Logo -->
             <a href="index.php" id="logo-link" rel="home">
@@ -25,7 +23,6 @@
             </a>
             <!-- END Logo --> 
             <div id="show-menu"><a href="#">Menu</a></div>
-
             <!-- START Navigation -->
             <nav class="site-navigation primary-navigation">
                 <div class="menu-all-pages-container">
@@ -62,8 +59,8 @@
         </header>
     
     
-        <!-- ------------------------------------------------------------------------------------------------------------------------ -->    
-        <!-- MAIN WEBCONTENT -->
+<!-- ------------------------------------------------------------------------------------------------------------------------ -->    
+<!-- MAIN WEBCONTENT -->
         <div class="page-inner">
             <div class="container">
                 <div id="boxed_content" class="boxed_content">
@@ -162,49 +159,49 @@
                 </div>
             </div>
         </div>
+        
+        
 <!------------------------------------------------------------------------------------------------------------------------------->
 <!-- scripts -->
-<script type="text/javascript" src="http://arrow.scrolltotop.com/arrow30.js"></script>
-<script type="text/javascript">
-  $(document).ready(function(){
-    $('header #show-menu').click(function(e){
-      e.preventDefault();
-      $('header nav.site-navigation').toggle('slow');
-    });
-
-    $( window ).resize(function(){
-      if(window.innerWidth > 1024) {
-        $("header nav.site-navigation").removeAttr("style");
-      }
-    });
-  });
-</script>   
-    
-    <script id="addJS">
-      jQuery(document).ready(function($) {
-          jQuery.rsCSS3Easing.easeOutBack = 'cubic-bezier(0.175, 0.885, 0.320, 1.275)';
-            $('#home-slider-1').royalSlider({
-            arrowsNav: true,
-            arrowsNavAutoHide: true,
-            fadeinLoadedSlide: false,
-            controlNavigationSpacing: 0,
-            controlNavigation: 'bullets',
-            imageScaleMode: 'none',
-            imageAlignCenter:false,
-            blockLoop: true,
-            loop: true,
-            numImagesToPreload: 3,
-            transitionType: 'fade',
-            keyboardNavEnabled: true,
-            block: {
-              delay: 400
-            }
-          });
-      });
-    </script>
-    <script src="js/global.js"></script>
-    <script src="js/jquery.royalslider.min.js"></script>
-	<script src="https://cdn.socket.io/socket.io-1.2.0.js"></script>
-	<script src="js/client.js"></script>
-</body>
+        <script type="text/javascript" src="http://arrow.scrolltotop.com/arrow30.js"></script>
+        <script type="text/javascript">
+            $(document).ready(function(){
+                $('header #show-menu').click(function(e){
+                    e.preventDefault();
+                    $('header nav.site-navigation').toggle('slow');
+                });
+                $( window ).resize(function(){
+                    if(window.innerWidth > 1024) {
+                        $("header nav.site-navigation").removeAttr("style");
+                    }
+                });
+            });
+        </script>   
+        <script id="addJS">
+            jQuery(document).ready(function($) {
+                jQuery.rsCSS3Easing.easeOutBack = 'cubic-bezier(0.175, 0.885, 0.320, 1.275)';
+                $('#home-slider-1').royalSlider({
+                    arrowsNav: true,
+                    arrowsNavAutoHide: true,
+                    fadeinLoadedSlide: false,
+                    controlNavigationSpacing: 0,
+                    controlNavigation: 'bullets',
+                    imageScaleMode: 'none',
+                    imageAlignCenter:false,
+                    blockLoop: true,
+                    loop: true,
+                    numImagesToPreload: 3,
+                    transitionType: 'fade',
+                    keyboardNavEnabled: true,
+                    block: {
+                        delay: 400
+                    }
+                });
+            });
+        </script>
+        <script src="js/global.js"></script>
+        <script src="js/jquery.royalslider.min.js"></script>
+        <script src="https://cdn.socket.io/socket.io-1.2.0.js"></script>
+        <script src="js/client.js"></script>
+    </body>
 </html>
