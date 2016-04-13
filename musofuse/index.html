@@ -15,7 +15,63 @@
 </head>
 
 <body>
-<div w3-include-html="content/header.html"></div>
+
+    
+     <header class="boxed_content">
+    <!-- START Logo -->
+    <a href="index.php" id="logo-link" rel="home">
+      <img src="images/logo.png" id="logo" alt="Townsville Community Music Centre Logo" />
+    </a>
+    <!-- END Logo --> 
+  <div id="show-menu"><a href="#">Menu</a></div>
+
+    <!-- START Navigation -->
+    <nav class="site-navigation primary-navigation">
+      <div class="menu-all-pages-container">
+        <ul class="nav-menu">
+          <li class="current-menu-item"><a href="index.php">Home</a></li>
+          <li ><a href="events.php">page1</a></li>
+          <li ><a href="bulletinboard.php">page2</a></li>
+          <li ><a href="artists.php">Apage3</a></li>
+          <li ><a href="members.php">page4</a></li>
+          <li ><a>About</a></li>
+         <!-- <li <?php if ($name == "contact") echo 'class="current-menu-item"'; ?>><a href="contact.php">Contact</a></li> -->
+<!--       <?php
+
+    if (isset($_SESSION['username'])) {
+        echo "<li><a href='php/logout.php'>Logout</a></li>";
+  //  echo "<li>{$_SESSION['username']}</li>";
+    } else { -->
+        <li><a href='#openModal'>Login</a></li> <!--
+}
+
+?> -->
+        </ul>
+           <div id='openModal' class='modalDialog'>     
+        <div>
+		    <a href='#close' title='Close' class='close'>X</a>
+		    <h2>Login</h2>
+		    <form id='login' name='login' method='post' action='#' >
+                <table>
+                    <tr>
+                        <td><label class='loginlabel' for='username'>Username</label></td>
+                        <td><input name='username' class='username' type='text' id='username' placeholder='email'></td>
+                    </tr>
+                    <tr>
+                        <td><label class='loginlabel' for='password'>Password</label></td>
+                        <td><input name='password' class='password' type='password' id='password' placeholder='username'></td>
+                    </tr>
+                </table>
+                <input name= 'submit' class='submit' type='submit' value='Login' >            
+            </form>
+        </div>
+   </div>
+      </div>
+    </nav>
+    <!-- END Navigation -->
+  </header>
+    
+    
     
 <!-- WEBSITE LAYOUT Box -->
     <div class="page-inner">
@@ -90,9 +146,63 @@
 <script type="text/javascript" src="http://arrow.scrolltotop.com/arrow30.js"></script>
 
   <!-- END .site-content -->
-  <?php
-require("php/footer.php");
-?>
+
+        
+        
+        
+            <div class="footer-wrapper ">
+      <footer class="site-footer container">
+        <div class="content">
+          <div class="footer-logo"><a href="index.php"><img src="images/logo.png" style="width:147px; height:98px;" alt="logo" /></a></div>
+          <ul class="footer-navigation">
+            <li><a href="index.php">Home</a></li>
+            <li><a href="events.php">page1</a></li>
+            <li><a href="bulletinboard.php">page1</a></li>
+            <li><a href="artists.php">page1</a></li>
+            <li><a href="members.php">page1</a></li>
+            <li><a href="about.php">About</a></li>
+            
+          </ul>
+          <ul class="footer-contact">
+            <li class="footer-contact-address">Musofuse</li>
+            <li class="footer-contact-email"> <a href="mailto:admin@townsvillemusic.org.au?Subject=Enquiry" target="_top">x@admin.com</a> </li>
+            <li class="footer-contact-phone">footer</li>
+          </ul>
+          <div class="footer-facebook">
+            <a href="" target="_blank">
+              <div class="fb-icon"></div>
+              <img src="images/fb2.png" style="display: none;" alt="Facebook Icon"/>
+            </a>
+          </div>
+        </div>
+      </footer>
+    </div>
+    
+  </div>
+  <!-- END .inner --> 
+  
+</div>
+<!-- END #boxed-content -->
+
+<script type="text/javascript">
+  $(document).ready(function(){
+    $('header #show-menu').click(function(e){
+      e.preventDefault();
+      $('header nav.site-navigation').toggle('slow');
+    });
+
+    $( window ).resize(function(){
+      if(window.innerWidth > 1024) {
+        $("header nav.site-navigation").removeAttr("style");
+      }
+    });
+  });
+</script>
+
+        
+        
+        
+        
     </div></div> 
     <script id="addJS">
       jQuery(document).ready(function($) {
