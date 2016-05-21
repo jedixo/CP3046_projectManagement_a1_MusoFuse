@@ -1,0 +1,11 @@
+{
+  "name": "express-cookies-example",
+  "version": "0.0.1",
+  "description": "A sample code project demonstrating cookies using express",
+  "dependencies": {
+  	"express": "*",
+      "cookie-parser": "*",
+      "body-parser":"*"
+   },
+  "engine": "node >=0.6.x"
+}
