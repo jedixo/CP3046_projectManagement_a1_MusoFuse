@@ -73,6 +73,12 @@ app.post('/api/photo',function(req,res){
     });
 });
 
+//Login Requests
+app.post('/loginVerification', function(req,res){
+    console.log("Hello user");
+    res.send("Hello User");
+});
+
 var server = app.listen(app.get('port'), function () {
   var port = server.address().port;
 

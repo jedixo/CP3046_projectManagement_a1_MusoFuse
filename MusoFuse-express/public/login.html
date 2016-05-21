@@ -9,6 +9,17 @@
     <!-- Bootstrap -->
     <link href="bootstrap/css/bootstrap.min.css" rel="stylesheet">
     <link rel="stylesheet" href="style.css">
+    <script>
+      var submitButton = document.getElementById("loginBtn");
+submitButton.onclick = loginRequest();
+
+function loginRequest(){
+    var x = new XMLHttpRequest();
+    x.open("POST", "/loginVerification");
+    x.send();
+    console.log(x.responseText);
+}
+      </script>  
       
   </head>
   <body>
@@ -87,7 +98,7 @@
                 <button type="button" class="close" data-dismiss="modal">&times;</button>
                     <h4 class="modal-title">Login:</h4>
                 </div>
-                <div class="modal-body">
+                <div class="modal-body" method="post">
                 <form id="loginForm">
                     Email Address:<br>
                 <input type="text" placeholder="Username"><br>
@@ -96,7 +107,7 @@
                 </form>
                 </div>
                 <div class="modal-footer">
-                <input type="submit" class="btn btn-success" value="Login" form="loginForm">
+                <input type="submit" class="btn btn-success" value="Login" form="loginForm" id="loginBtn">
                 <a href="#" class="btn btn-info" data-toggle="modal" data-target="#registerModal">Register</a>
                 <button type="button" class="btn btn-danger" data-dismiss="modal">Cancel</button>
                 </div>
