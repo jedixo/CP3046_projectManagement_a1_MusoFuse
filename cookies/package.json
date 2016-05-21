@@ -5,7 +5,8 @@
   "dependencies": {
   	"express": "*",
       "cookie-parser": "*",
-      "body-parser":"*"
+      "body-parser": "*",
+      "express-session": "*"
    },
   "engine": "node >=0.6.x"
 }

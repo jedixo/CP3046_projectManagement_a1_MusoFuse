@@ -26,7 +26,7 @@ app.set('port', 3000);
 app.use(logger('dev'));
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: false }));
-app.use(cookieParser());
+app.use(cookieParser('my secret here'));
 app.use(express.static('public'));
 
 
