@@ -15,6 +15,10 @@ var storage =   multer.diskStorage({
 });
 var upload = multer({ storage : storage}).single('userFile');
 
+//Mongodb requirements
+var MongoClient = require('mongodb').MongoClient;
+var assert = require('assert');
+
 
 var app = express();
 app.set('port', 3000);
@@ -75,8 +79,12 @@ app.post('/api/photo',function(req,res){
 
 //Login Requests
 app.post('/loginVerification', function(req,res){
-    console.log("Hello user");
-    res.send("Hello User");
+  // var url = 'mongodb://localhost:27017/test';
+  // MongoClient.connect(url, function(err, db) {
+  // assert.equal(null, err);
+  // console.log("Connected correctly to server.");
+  // db.close();
+  // });
 });
 
 var server = app.listen(app.get('port'), function () {

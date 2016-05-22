@@ -11,12 +11,13 @@
     <link rel="stylesheet" href="style.css">
     <script>
       var submitButton = document.getElementById("loginBtn");
-submitButton.onclick = loginRequest();
+      submitButton.onclick = loginRequest();
 
 function loginRequest(){
+    console.log("Hello xmlreq");
     var x = new XMLHttpRequest();
-    x.open("POST", "/loginVerification");
-    x.send();
+    x.open("POST", "127.0.0.1:8080/loginVerification");
+    x.send("Hello Server");
     console.log(x.responseText);
 }
       </script>  
@@ -71,7 +72,7 @@ function loginRequest(){
             <div class="col-md-6">
                 <div class="panel" id="loginPanel">
                 <h3>Login:</h3>
-                <form>
+                <form method="POST" action="localhost:8080/loginVerification">
                     Email Address:<br>
                 <input type="text" placeholder="Username"><br>
                     Password:<br>
